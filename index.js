@@ -316,7 +316,15 @@ const GetVersion = require('./utils/version');
   console.log(`UserAgent set to, ${axios.defaults.headers["user-agent"]}`);
   webhookClient.send(`
 \`\`\`fix
-+Bot loading ... \`\`\``)
++Bot loading ... \`\`\`
+[⬛---------------]
+[⬛⬛-------------]
+[⬛⬛⬛----------]
+[⬛⬛⬛⬛--------]
+[⬛⬛⬛⬛⬛-----]
+[⬛⬛⬛⬛⬛⬛--]
+[⬛⬛⬛⬛⬛⬛⬛]
+ `)
   // this?
   /**
      * @type {ClientOptions}
@@ -359,9 +367,9 @@ const GetVersion = require('./utils/version');
   await Promise.all(accountsobject.map(async (client) => {
     await client.login();
     webhookClient.send(`**Bot Fortnite**
-\`\`\`diff
-+ ${client.user.self.displayName}is Online ...
-powereb by https://mtbr29.dev
+\`\`\`css
+.${client.user.self.displayName} is Online ...
+(powered by https://mtbr29.dev)
 \`\`\``);
     party = client.party
     const fnbrclient = client
