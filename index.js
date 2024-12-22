@@ -315,15 +315,15 @@ const GetVersion = require('./utils/version');
   axios.defaults.headers["user-agent"] = UserAgent;
   console.log(`UserAgent set to, ${axios.defaults.headers["user-agent"]}`);
   webhookClient.send(`
-\`\`\`fix
+\`\`\`diff
 +Bot loading ... \`\`\`
-[⬛---------------]
-[⬛⬛-------------]
-[⬛⬛⬛----------]
-[⬛⬛⬛⬛--------]
-[⬛⬛⬛⬛⬛-----]
-[⬛⬛⬛⬛⬛⬛--]
-[⬛⬛⬛⬛⬛⬛⬛]
+[🟪-------------------]
+[🟪🟪----------------]
+[🟪🟪🟪-------------]
+[🟪🟪🟪🟪----------]
+[🟪🟪🟪🟪🟪-------]
+[🟪🟪🟪🟪🟪🟪----]
+[🟪🟪🟪🟪🟪🟪🟪]
  `)
   // this?
   /**
@@ -368,9 +368,9 @@ const GetVersion = require('./utils/version');
     await client.login();
     webhookClient.send(`**Bot Fortnite**
 \`\`\`css
-.${client.user.self.displayName} is Online ...
+[${client.user.self.displayName}] is Online ...\`\`\`
 (powered by https://mtbr29.dev)
-\`\`\``);
+`);
     party = client.party
     const fnbrclient = client
     client.setStatus(bot_invite_status, bot_invite_onlinetype)
