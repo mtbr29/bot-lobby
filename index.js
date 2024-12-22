@@ -358,9 +358,11 @@ const GetVersion = require('./utils/version');
   
   await Promise.all(accountsobject.map(async (client) => {
     await client.login();
-    webhookClient.send(`Bot Fortnite
+    webhookClient.send(`**Bot Fortnite**
 \`\`\`diff
-+ ${client.user.self.displayName} Online\`\`\``);
++ ${client.user.self.displayName}is Online ...
+powereb by https://mtbr29.dev
+\`\`\``);
     party = client.party
     const fnbrclient = client
     client.setStatus(bot_invite_status, bot_invite_onlinetype)
