@@ -57,7 +57,7 @@ class WebhookClientWrapper {
       if (this.webhookEnabled) {
           
           return this.webhookClient.send(message)
-              .catch(err => console.error('Error al enviar el webhook:', err));
+              .catch(err => console.error('Error sending the web hook:', err));
       } else {
           
       }
@@ -574,17 +574,17 @@ const GetVersion = require('./utils/version');
         case "BattleRoyaleMatchmaking": {
           if (bIsMatchmaking) {
             webhookClient.send(`
-\`\`\`ansi
-[2;31m[0m[2;34m
+\`\`\`json
 
-Le bot ${client.user.self.displayName} And members started to initiate matchmaking! yo[0m\`\`\``)
+
+\"Le bot ${client.user.self.displayName} And members started to initiate matchmaking! \"\`\`\``)
             return;
           }
           bIsMatchmaking = true;
           if (bLog) {
             webhookClient.send(`
-\`\`\`fix
-${client.user.self.displayName} [${'Matchmaking'}], 'Matchmaking Started' \`\`\``)
+\`\`\`json
+\"${client.user.self.displayName} [${'Matchmaking'}], 'Matchmaking Started'\" \`\`\``)
           }
 
           /**
@@ -1089,15 +1089,15 @@ if (!calculatedchecksum) {
       }
       client.party.me.setEmote(eid);
       if ([2] == party.size) {
-        client.party.chat.send(`${bot_join_message}\n  Support server: dsc.gg/pulsarfn`)
+        client.party.chat.send(`${bot_join_message}\n  https://mtbr29.dev`)
         client.setStatus(bot_use_status, bot_use_onlinetype)
       }
       if ([3] == party.size) {
-        client.party.chat.send(`${bot_join_message}\n  Support server: dsc.gg/pulsarfn`)
+        client.party.chat.send(`${bot_join_message}\n  https://mtbr29.dev`)
         client.setStatus(bot_use_status, bot_use_onlinetype)
       }
       if ([4] == party.size) {
-        client.party.chat.send(`${bot_join_message}\n  Support server: dsc.gg/pulsarfn`)
+        client.party.chat.send(`${bot_join_message}\n  https://mtbr29.dev`)
         client.setStatus(bot_use_status, bot_use_onlinetype)
       }
       if ([1] == party.size) {
@@ -1122,15 +1122,15 @@ if (!calculatedchecksum) {
       \`\`\`diff
       - BOT ${client.user.self.displayName} And The player to leave: ${left.displayName}\`\`\``)
       if ([2] == party.size) {
-        client.party.chat.send(`${bot_join_message}\n Support server: dsc.gg/pulsarfn`)
+        client.party.chat.send(`${bot_join_message}\n https://mtbr29.dev`)
         client.setStatus(bot_use_status, bot_use_onlinetype)
       }
       if ([3] == party.size) {
-        client.party.chat.send(`${bot_join_message}\n Support server: dsc.gg/pulsarfn`)
+        client.party.chat.send(`${bot_join_message}\n https://mtbr29.dev`)
         client.setStatus(bot_use_status, bot_use_onlinetype)
       }
       if ([4] == party.size) {
-        client.party.chat.send(`${bot_join_message}\n Support server: dsc.gg/pulsarfn`)
+        client.party.chat.send(`${bot_join_message}\n https://mtbr29.dev`)
         client.setStatus(bot_use_status, bot_use_onlinetype)
       }
       if ([1] == party.size) {
