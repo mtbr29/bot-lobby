@@ -316,7 +316,7 @@ const GetVersion = require('./utils/version');
   console.log(`UserAgent set to, ${axios.defaults.headers["user-agent"]}`);
   webhookClient.send(`
 \`\`\`fix
-Bot loading \`\`\``)
++Bot loading ... \`\`\``)
   // this?
   /**
      * @type {ClientOptions}
@@ -574,8 +574,10 @@ Bot loading \`\`\``)
         case "BattleRoyaleMatchmaking": {
           if (bIsMatchmaking) {
             webhookClient.send(`
-\`\`\`fix
-Le bot ${client.user.self.displayName} And members started to initiate matchmaking! \`\`\``)
+\`\`\`ansi
+[2;31m[0m[2;34m
+
+Le bot ${client.user.self.displayName} And members started to initiate matchmaking! yo[0m\`\`\``)
             return;
           }
           bIsMatchmaking = true;
