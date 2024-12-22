@@ -325,10 +325,10 @@ const GetVersion = require('./utils/version');
 [🟪🟪🟪🟪🟪🟪----]
 [🟪🟪🟪🟪🟪🟪🟪]
 https://mtbr29.dev
-```ansi
+\`\`\`ansi
 [2;35mvvv[0m
 
-```
+\`\`\`
  `)
   // this?
   /**
