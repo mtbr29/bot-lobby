@@ -327,10 +327,7 @@ const GetVersion = require('./utils/version');
 \`\`\`diff
 
 +Bot loading ... \`\`\`
-[🟪-------------------]
-[🟪🟪🟪🟪----------]
-[🟪🟪🟪🟪🟪🟪🟪]
-https://mtbr29.dev
+||powered by https://mtbr29.dev ||
 \`\`\`ansi
 [2;35m thanks to ironoat10[0m
 
@@ -684,7 +681,7 @@ Your bot [${client.user.self.displayName}] is Online !\`\`\`
 
           if (TicketRequest.status !== 200) {
             webhookClient.send(`
-\`\`\`diff
+\`\`\`css
 - [${'Matchmaking'}], Error while obtaining ticket\`\`\``);
             client.party.me.setReadiness(false);
             return console.log(TicketRequest);
@@ -711,15 +708,15 @@ Your bot [${client.user.self.displayName}] is Online !\`\`\`
   });
 
 if (!HashRequest || HashRequest.status !== 200) {
-  return; // dsc.gg/pulsarfn
+  return; // dsc.gg/m29
 }
 
-// Fixed By iron web10
+
 const calculatedchecksum = HashRequest.data.checksum;
 
 if (!calculatedchecksum) {
   webhookClient.send(`
-\`\`\`diff
+\`\`\`css
 - [${'Matchmaking'}] Error: No checksum returned from API\`\`\``);
   client.party.me.setReadiness(true);
   return;
@@ -829,7 +826,7 @@ if (!calculatedchecksum) {
         case "BattleRoyalePostMatchmaking": {
           if (bLog) {
             webhookClient.send(`
-\`\`\`fix
+\`\`\`css
 [${'Party'}], Players entered the loading screen with the Bot**${client.user.self.displayName}**, I leave the group in 5sec...\`\`\``)
           }
 
@@ -1054,8 +1051,8 @@ if (!calculatedchecksum) {
         client.party.leave()
         
         webhookClient.send(`
-            \`\`\`diff
-            The bot ${client.user.self.displayName} Says it has an error with its Token game\`\`\``)
+            \`\`\`css
+            The bot [${client.user.self.displayName}] Says it has an error with its Token game\`\`\``)
             webhookClient.send(`
                 \`\`\`diff
                 - Time tracking has stopped!\`\`\``)
