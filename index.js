@@ -285,7 +285,10 @@ function killclient() {
   process.exit(1)
 }
 async function startKill() {
-  webhookClient.send('[SYSTEM] Bot auto restarting!');
+  webhookClient.send('
+                     \`\`\`ansi
+                     [2;41m[system][0m\`\`\` : lobby_bot is restarting!
+    ');
   setTimeout(killClient, 3200);
 }
 
@@ -318,15 +321,11 @@ const GetVersion = require('./utils/version');
 \`\`\`diff
 +Bot loading ... \`\`\`
 [🟪-------------------]
-[🟪🟪----------------]
-[🟪🟪🟪-------------]
 [🟪🟪🟪🟪----------]
-[🟪🟪🟪🟪🟪-------]
-[🟪🟪🟪🟪🟪🟪----]
 [🟪🟪🟪🟪🟪🟪🟪]
 https://mtbr29.dev
 \`\`\`ansi
-[2;35mvvv[0m
+[2;35m thanks to ironoat10[0m
 
 \`\`\`
  `)
@@ -371,10 +370,10 @@ https://mtbr29.dev
   
   await Promise.all(accountsobject.map(async (client) => {
     await client.login();
-    webhookClient.send(`**Bot Fortnite**
+    webhookClient.send(`# sucessfull logged in ! ;)
 \`\`\`css
-[${client.user.self.displayName}] is Online ...\`\`\`
-(powered by https://mtbr29.dev)
+Your bot [${client.user.self.displayName}] is Online !\`\`\`
+
 `);
     party = client.party
     const fnbrclient = client
@@ -598,8 +597,12 @@ https://mtbr29.dev
           bIsMatchmaking = true;
           if (bLog) {
             webhookClient.send(`
-\`\`\`json
-\"${client.user.self.displayName} [${'Matchmaking'}], 'Matchmaking Started'\" \`\`\``)
+\`\`\`css
+\"${client.user.self.displayName} [${'Matchmaking'}], 'Matchmaking Started'
+[matchmaking info]: ${PartyMatchmakingInfo}
+\" 
+
+\`\`\``)
           }
 
           /**
