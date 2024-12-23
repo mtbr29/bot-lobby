@@ -315,7 +315,19 @@ const GetVersion = require('./utils/version');
   axios.defaults.headers["user-agent"] = UserAgent;
   console.log(`UserAgent set to, ${axios.defaults.headers["user-agent"]}`);
   webhookClient.send(`
+\`\`\`arm
+
+
+  _           _       _                      _               _   
+ | |   ___   | |__   | |__    _   _         | |__     ___   | |_ 
+ | |  / _ \  | '_ \  | '_ \  | | | |        | '_ \   / _ \  | __|
+ | | | (_) | | |_) | | |_) | | |_| |        | |_) | | (_) | | |_ 
+ |_|  \___/  |_.__/  |_.__/   \__, |  _____ |_.__/   \___/   \__| #######################
+                              |___/  |_____|                      #by mtbr29 & ironweb10#
+                                                                  #######################
+\`\`\`
 \`\`\`diff
+
 +Bot loading ... \`\`\`
 [🟪-------------------]
 [🟪🟪🟪🟪----------]
