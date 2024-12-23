@@ -316,8 +316,6 @@ const GetVersion = require('./utils/version');
   console.log(`UserAgent set to, ${axios.defaults.headers["user-agent"]}`);
   webhookClient.send(`
 \`\`\`arm
-
-
   _           _       _                      _               _   
  | |   ___   | |__   | |__    _   _         | |__     ___   | |_ 
  | |  / _ \  | '_ \  | '_ \  | | | |        | '_ \   / _ \  | __|
@@ -1076,11 +1074,11 @@ if (!calculatedchecksum) {
 
         webhookClient.send(`
         \`\`\`diff
-        + Bot ${client.user.self.displayName} joined \`\`\``);
++Bot ${client.user.self.displayName} joined \`\`\``);
         
         webhookClient.send(`
         \`\`\`diff
-        + The bot ${client.user.self.displayName} joined \`\`\``) 
++The bot ${client.user.self.displayName} joined \`\`\``) 
         let membersstr = "";
         join.party.members.map(async member => {
           membersstr += member.displayName + '\n'
