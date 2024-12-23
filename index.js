@@ -285,8 +285,7 @@ function killclient() {
   process.exit(1)
 }
 async function startKill() {
-  webhookClient.send('\`\`\`ansi
-                     [2;41m[system][0m\`\`\` : lobby_bot is restarting!');
+  webhookClient.send(' \`\`\`ansi [2;41m[system][0m\`\`\` : lobby_bot is restarting!');
   setTimeout(killClient, 3200);
 }
 
